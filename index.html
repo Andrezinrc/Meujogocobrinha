@@ -275,7 +275,7 @@
     
     createSnowflakes();
     animateSnow();
-  
+    
     var levelSelect = document.getElementById("levelSelect");
     var btnMenu = document.getElementById("btn-menu");
     var menu = document.getElementById("menu-mobile");
@@ -286,46 +286,31 @@
       menu.classList.toggle('abrirMenu');
     });
     
-    function setCanvasColor() {
-      var selectedColor = document.getElementById("levelColorSelect").value;
-    }
-    
     function startGame() {
       var playerName = document.getElementById("playerName").value;
       var selectedLevel = levelSelect.options[levelSelect.selectedIndex].value;
-      var selectedColor = document.getElementById("levelColorSelect").value;
     
       if (playerName === "") {
-        setTimeout(() => {
-          alerta.style.display = "block";
-        },300)
+        alerta.style.display = "block";
         setTimeout(() => {
           alerta.style.display = "none";
         }, 3000);
       } else {
         localStorage.setItem("playerName", playerName);
-        localStorage.setItem("levelColor", selectedColor);
     
         if (selectedLevel === "hard") {
-          window.location.href = "dificil.html?color=" + selectedColor;
+          window.location.href = "dificil.html";
         } else if (selectedLevel === "easy") {
-          window.location.href = "facil.html?color=" + selectedColor;
+          window.location.href = "facil.html";
         } else if (selectedLevel === "medium") {
-          window.location.href = "medio.html?color=" + selectedColor;
+          window.location.href = "medio.html";
         }
       }
+    }
     
-      
-      var selectedLevel = levelSelect.options[levelSelect.selectedIndex].value;
-      setCanvasColor();
-      localStorage.setItem("playerName", playerName);
+    // Remova a função setCanvasColor(), pois o elemento de cor foi removido.
     
-      var selectedColor = document.getElementById("levelColorSelect").value;
-      localStorage.setItem("levelColor", selectedColor);
-    
-      }
-    
-    setCanvasColor();
+    // Remova qualquer menção ao "levelColorSelect" no código, pois foi removido.
   </script>
 </body>
 </html>
