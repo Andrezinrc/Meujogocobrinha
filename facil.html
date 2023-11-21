@@ -105,7 +105,7 @@
     <h3 id="tempo" class="tempo"></h3>
     <h3 id="tempo-poder" class="tempo-poder"></h3>
     <div class="snow"></div>
-  
+  <button onclick="playAudio()">Reproduzir</button>
     <div class="pisca-pisca"></div>
   </div>
   <script>
@@ -122,14 +122,9 @@
     audio.volume = 0.5; // Ajuste o volume conforme necessário
     
     function playAudio() {
+      var audio = document.getElementById("myAudio");
       audio.play();
-    }
-    
-    function pauseAudio() {
-      audio.pause();
-    }
-    
-    playAudio();
+   }
 
     window.onload = function(){
       alert("Bem-vindo ao Modo facil do Jogo da Cobrinha!\n\n" +
