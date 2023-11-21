@@ -487,13 +487,13 @@ html, body {
     top: -23px;
     left: 50%;
     transform: translateX(-50%);
-    color: white;
+    color: red;
   }
    .tempo-poder{
     position: absolute;
     top: -23px;
     right: 80px;
-    color: white;
+    color: red;
   }
  } 
 }
