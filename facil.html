@@ -69,10 +69,14 @@
 </head>
 
 <body>
+  <audio id="myAudio" loop>
+    <source src="/belly-dance-middle-east-arabic-oriental-ethnic-118609.mp3" type="audio/mp3">
+    Seu navegador não suporta o elemento de áudio.
+  </audio>
   <h1 class="paragrafo" id="paragrafo">
   </h1>
 
-  <div class="container">
+   <div class="container">
     
     <canvas id="gameCanvas"></canvas>
 
@@ -101,7 +105,7 @@
     <h3 id="tempo" class="tempo"></h3>
     <h3 id="tempo-poder" class="tempo-poder"></h3>
     <div class="snow"></div>
-    <!-- Adicione isso dentro da tag <body>, abaixo dos elementos existentes -->
+  
     <div class="pisca-pisca"></div>
   </div>
   <script>
@@ -113,6 +117,18 @@
         window.location.href = "facil.html?color=" + corDeFundo;
       }
     }
+    
+    var audio = document.getElementById("myAudio");
+    audio.volume = 0.5; // Ajuste o volume conforme necessário
+    
+    function playAudio() {
+      audio.play();
+    }
+    
+    function pauseAudio() {
+      audio.pause();
+    }
+    window.onload = playAudio;
 
     window.onload = function(){
       alert("Bem-vindo ao Modo facil do Jogo da Cobrinha!\n\n" +
